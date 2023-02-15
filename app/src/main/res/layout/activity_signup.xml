@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tdools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity">
+    <LinearLayout
+        android:id="@+id/logol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#03203C"
+        android:gravity="center"
+        android:padding="@dimen/_16sdp"
+        >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:src="@drawable/app_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/white"
+            android:text="Kentech Competition" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Sign Up"
+        android:textColor="@color/black"
+        android:layout_below="@id/logol"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_90sdp"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailtextinput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logol"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:hint="Fullnames"
+        app:startIconDrawable="@drawable/ic_baseline_email_24"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/purple_500"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_70sdp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fullnames"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Emailtextinputsignup"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailtextinput"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:hint="Email Id"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        app:helperTextTextColor="@color/purple_500"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_10sdp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Emailsignup"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Passwordtextinputsignup"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Emailtextinputsignup"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:hint="Password"
+        app:endIconMode="password_toggle"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        app:helperTextTextColor="@color/purple_500"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_10sdp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordsignup"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Confirmpasswordtextinput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Passwordtextinputsignup"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:hint="Confirm Password"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        app:helperText="Required*"
+        app:endIconMode="password_toggle"
+        app:helperTextTextColor="@color/purple_500"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_10sdp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/confirmpasswordsignup"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signupbutton"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:background="@drawable/buttons"
+        android:layout_below="@id/Confirmpasswordtextinput"
+        android:layout_marginLeft="@dimen/_110sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+
+
+</RelativeLayout>
